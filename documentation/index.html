@@ -1,0 +1,598 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Template documentation</title>
+    <style>
+		a,
+		.show-more {
+			color: #06F;
+			text-decoration: underline;
+		}
+		
+		body {
+			font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+			color: #333;
+			background-color: #F5F5F5;
+			margin: 0;
+			padding: 0 220px 0 4%;
+			min-width: 450px;
+		}
+		
+		h1 {
+			text-align: center;
+		}
+		
+		hr {
+			width: 90%;
+			display: inline-block;
+			background-color: #BBB;
+			height: 1px;
+			border: none;
+			margin: 30px 5% 40px 5%;
+		}
+		
+		li {
+			list-style: disc;
+		}
+		
+		p {
+			margin: 10px;
+		}
+		
+		ul.decimal li {
+			list-style: decimal;
+		}
+		
+		#menu {
+			width: 180px;
+			position: fixed;
+			top: 25px;
+			right: 20px;
+			background-color: #FFF;
+			border: 1px #CCC solid;
+		}
+		
+		#menu hr {
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		
+		#menu a {
+			text-decoration: none;
+			color: #333;
+		}
+		
+		#menu a:hover li {
+			background-color: rgba(0,0,0,0.1);
+		}
+		
+		#menu li {
+			list-style: none;
+			padding: 4px 3px;
+		}
+		
+		#menu ul {
+			display: inline-block;
+			margin: 0;
+			padding: 10px;
+		}
+		
+		.clear {
+			clear: both;
+		}
+		
+		.code {
+			font-family: "Courier New", Courier, monospace;
+			font-size: 13px;
+			margin: 5px 20px;
+			padding: 10px 15px;
+			display: inline-block;
+			border: 1px dashed #CCC;
+			background-color: #FBFBFB;
+		}
+		
+		.code-tab {
+			padding-left: 18px;
+		}
+		
+		.columns-two {
+			width: 46%;
+			margin-left: 2%;
+			margin-right: 2%;
+			float: left;
+		}
+		
+		.head-info {
+			text-align: center;
+		}
+		
+		.head-info,
+		.section {
+			-webkit-border-radius: 10px;
+			   -moz-border-radius: 10px;
+					border-radius: 10px;
+			background-color: #E9E9E9;
+			border: 2px #DDD solid;
+			padding: 10px 20px 20px 20px;
+			margin-bottom: 70px;
+		}
+		
+		.show-more {
+			cursor: pointer;
+		}
+		
+		.sub-section {
+			padding: 3px 10px;
+		}
+		
+		.tooltip {
+			position: relative;
+		}
+		
+		.tooltip:after {
+			font-size: 12px;
+			display: none;
+			content: attr(title);
+			position: absolute;
+			top: -27px;
+			left: 0;
+			padding: 4px;
+			white-space: nowrap;
+			background-color: #FFF;
+			border: 1px #000 solid;
+			z-index: 999;
+		}
+		
+		.tooltip:hover:after {
+			display: block;
+		}
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$('.more-content').hide();
+            $('.show-more').click(function(e) {
+            	$(this).next('.more-content').show();
+				$(this).hide();
+        	});
+        });
+	</script>
+</head>
+
+
+
+<body>
+    <h1>Documentation for Bakery template</h1>
+    <div class="head-info">
+        <div class="columns-two">
+            <p><strong>Created:</strong> 16.12.2014</p>
+            <p><strong>Version:</strong> 1.0</p>
+        </div>
+        <div class="columns-two">
+            <p><strong>By:</strong> <a href="http://themeforest.net/user/IgnitionThemes">IgnitionThemes</a> &amp; <a href="http://themeforest.net/user/ivanbohatyr">ivanbohatyr</a></p>
+        	<p><strong>Template preview:</strong> <a href="http://ignitionthemes.eu/theme/bakery/index_customizer.html">Bakery Cakery & Bakery HTML5 Template</a></p>
+        </div>
+        <hr class="clear">
+        <p>Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email me via my user page contact form.</p>
+        <h4>Contact: Do not contact me directly (email will probably end in spam folder anyway) - always use the contact form on my Themeforest profile. Thank you.</h4>
+    </div>
+    
+    <div id="menu">
+        <ul>
+            <a href="#prologue"><li>Prologue</li></a>
+            <li><hr></li>
+            <a href="#layout"><li>1. Layout</li></a>
+            <a href="#skins"><li>2. Skins</li></a>
+            <a href="#plugins"><li>3. Plugins</li></a>
+            <a href="#sources-and-credits"><li>4. Sources and credits</li></a>
+            <a href="#graphics"><li>5. Graphics</li></a>
+            <a href="#css-files"><li>6. CSS files</li></a>
+            <a href="#contact-forms"><li>7. Contact and subscribe forms</li></a>
+            <a href="#others"><li>8. Others</li></a>
+            <li><hr></li>
+            <a href="#how-to"><li>How to...</li></a>
+            <a href="#faq"><li>FAQ</li></a>
+            <li><hr></li>
+            <a href="#epilogue"><li>Epilogue</li></a>
+        </ul>
+    </div>
+    
+    
+    
+    
+    <!-- PROLOGUE -->
+    <a id="prologue"></a>
+    <h2>Prologue</h2>
+    <div class="section">
+        <h3>Editing files</h3>
+        <p>If you don't know anything about HTML and web pages, before doing anything with this template I recommend you to take at least some basic tutorial or hire somebody experienced to do this.</p>
+        <p>As for tutorials I recommend <a href="http://www.w3schools.com/" target="_blank">w3schools.com</a></p>
+        <p>Editing php and JavaScript files is really advanced stuff, only experienced person should edit them. If you're not sure, do not change anything, it might cause serious damage to the scripts. Hiring somebody, who knows what to do, is better solution.</p>
+        <p><strong>If you are not familiar with these technologies, do not play around with these files.</strong></p>
+        <hr>
+        
+        <h3>Tools</h3>
+        <div class="show-more">Show content</div>
+        <div class="more-content">
+            <p><strong>Inspect element</strong> - when editing html and css files utilities like <a href="getfirebug.com/" target="_blank">firebug</a> (free firefox plugin) are great helpers. With them you can easily find element style, even the stylesheet name and line number where the inspected style rule is.</p>
+            <p><strong>Edit html/css/js/php files</strong> - use your favorite text editor. Editor, that highlights systax is good choice, <a href="http://www.pspad.com/" target="_blank">Pspad</a>(free) or <a href="http://notepad-plus-plus.org/" target="_blank">Notepad++</a>(free) might be enough.</p>
+            <p><strong>View pages</strong> - any common browser like <a href="http://www.mozilla.org/en-US/firefox/" target="_blank">Mozilla Firefox</a>(free)...</p>
+            <p><strong>Upload on server</strong> - look for some FTP program - <a href="https://filezilla-project.org/" target="_blank">filezilla</a>(free)...</p>
+        </div>
+        <hr>
+        
+        <h3>Licensing</h3>
+        <p>All items in this template package are mine or properly licensed as themeforest requires. For items that, are not mine, I try to keep license information close to them. So if you want to see the license, look into the items folder or perhaps it can be found on first lines of these files. Sometimes author release item under some license, but the license file is not available, then you could try to find the license on web site (if this item has url specified) or contact the author.</p>
+        <p>If you are not sure about licensing, contact me and I will give you all the information I have.</p>
+    </div>
+    
+    
+    
+    
+    <!-- 1. LAYOUT -->
+    <a id="layout"></a>
+    <h2>1. Layout</h2>
+    <div class="section">
+        <p>Bootstrap used, if you have any questions please refer to the bootstrap docs http://getbootstrap.com/.</p>
+        <hr>
+        
+        <h3>Other prepared layout constructions:</h3>
+        <div class="show-more">Show content</div>
+        <div class="more-content">
+            <h4>Margins</h4>
+            <h5>Vertical margins</h5>
+            <p>You may use defined margin classes: "margin-10", "margin-20" ... "margin-100" ("margin-10" = element with 10px height).</p>
+            <div class="code">
+                &lt;div class=&quot;margin-30&quot;&gt;content&lt;/div&gt;<br>
+            </div>
+        </div>
+        <hr>
+        
+        <h3>Responsive layout</h3>
+        <p>Responsive layout makes the content fit the window width. If content changes the responvity might get worse or even broken. This cannot be handled be template - if original menu has 6 items, the responsivity counts with this approximately width, but if this menu is made with 15 items, the original responsivity rules cannot handle such difference. So after editing content you should check, if the responsivity still works well and if not, then make some adjustments.</p>
+        <p>These responsivity rules are called <em>media queries</em> and usually are at the bottom of the stylesheets.</p>
+    </div>
+    
+    
+    
+    
+    <!-- 2. SKINS -->
+    <a id="skins"></a>
+    <h2>2. Skins</h2>
+    <div class="section">
+    	<p><strong>Dark Skin</strong> - see index_dark.html and css/dark-skin.css (.less)</p>
+        <p>You can make new skins quite simple via less stylesheet (as online less compiler use for example http://less2css.org/).</p>
+    </div>
+    
+    
+    
+    
+    <!-- 3. PLUGINS -->
+    <a id="plugins"></a>
+    <h2>3. Plugins and JavaScript files</h2>
+    <div class="section">
+        <p><strong>If in doubts always see documentation from plugin author (if available).</strong></p>
+        <p><strong>If the plugin file(s) is not icluded the functionality will be lost or partial.</strong></p>
+        <p>All you should do with these plugins is: make html structure where plugin will work, adjust plugin settings and activate the plugin. Maybe you do not even need to do all of this - for example jQuery needs nothing more, than to be linked in the source code.</p>
+        <p>If needed edit plugin's stylesheets. Making changes in plugin's source code (js files) is in most cases not recommended.</p>
+        <p>Some plugins require jQuery library to be included first.</p>
+        <hr>
+        
+        <div class="show-more">Show content</div>
+        <div class="more-content">
+            <h3>jQuery</h3>
+            <p>JavaScript library.</p>
+            <p><strong>Many plugins use this library - jQuery has to be included first.</strong></p>
+            <p>File(s):</p>
+            <ul>
+                <li>js/jquery-XXX.min.js</li>
+            </ul>
+            <p>License: MIT license (<a href="http://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt">online</a>)</p>
+            <p>Home site: http://jquery.com/</p>
+            <p>Documentation: http://api.jquery.com/</p>
+            <hr>
+            
+            <h3>Modernizr</h3>
+            <p>Small JavaScript library that detects the availability of native implementations for next-generation web technologies.</p>
+            <p>File(s):</p>
+            <ul>
+                <li>js/modernizr-custom.js</li>
+            </ul>
+            <p>License: MIT license</p>
+            <p>Home site: http://modernizr.com/</p>
+            <p>Documentation: http://modernizr.com/docs/</p>
+            <hr>
+            
+            <h3>Masterslider</h3>
+            <p>Text and image slider.</p>
+            <p>File(s):</p>
+            <ul>
+                <li>masterslider/*</li>
+            </ul>
+            <p>License: you are allowed to use it in this template only, you have to buy a licence if you want to use in other projects (check codecanyon licensing for more info)</p>
+            <p>Home site: http://codecanyon.net/item/master-slider-responsive-touch-swipe-slider/6337671</p>
+            <p>Documentation: documentation/masterslider-documentation</p>
+            <hr>
+            
+            <h3>Owl-Carousel</h3>
+            <p>Animated content slider.</p>
+            <p>File(s):</p>
+            <ul>
+                <li>owl-carousel/*</li>
+            </ul>
+            <p>License: MIT license</p>
+            <p>Home site: http://owlgraphic.com/owlcarousel/</p>
+            <p>Documentation: http://owlgraphic.com/owlcarousel/#customizing</p>
+            <hr>
+            
+            <h3>Stellar</h3>
+            <p>Responsive parallax background plugin.</p>
+            <p>File(s):</p>
+            <ul>
+                <li>js/jquery.stellar.min.js</li>
+            </ul>
+            <p>License: MIT license</p>
+            <p>Home site: http://markdalgleish.com/projects/stellar.js/</p>
+            <p>Documentation: http://markdalgleish.com/projects/stellar.js/docs/</p>
+            <hr>
+            
+            <h3>Inview</h3>
+            <p>Determines if element is in view area.</p>
+            <p>File(s):</p>
+            <ul>
+                <li>js/jquery.inview.min.js</li>
+            </ul>
+            <p>License: Public license</p>
+            <p>Home site and documentation: https://github.com/protonet/jquery.inview</p>
+            <hr>
+            
+			<h3>Scroll To</h3>
+            <p>Scrolls to an anchor.</p>
+            <p>File(s):</p>
+            <ul>
+                <li>js/jquery.scrollTo.min.js</li>
+            </ul>
+            <p>License: MIT license</p>
+            <p>Home site and documentation: http://demos.flesler.com/jquery/scrollTo/</p>
+            <hr>            
+            
+            <h3>Placeholder fallback</h3>
+            <p>Small script that deals with no placeholder attribute support in old browsers.</p>
+            <p>File(s):</p>
+            <ul>
+                <li>js/placeholder-fallback.js</li>
+            </ul>
+            <hr>
+            
+            <h3>custom.js</h3>
+            <p>Contains pieces of javascript code (email sending, plugin activations...).</p>
+            <p>File(s):</p>
+            <ul>
+                <li>js/custom.js</li>
+            </ul>
+      	</div>
+    </div>
+    
+    
+    
+    
+    <!-- 4. SOURCES CREDITS -->
+    <a id="sources-and-credits"></a>
+    <h2>4. Sources and credits</h2>
+    <div class="section">
+        <p>For plugins licenses see Plugins section.</p>
+        <p>Some items also in Others section.</p>
+        <hr>
+        <h3>Items:</h3>
+        <p><a href="http://wallpaperswide.com/">Wallpapers Wide</a></p>
+        <p><a href="http://wall.alphacoders.com/">Wallpaper Abbys</a></p>
+        <p><a href="http://photodune.net/user/ollyi?WT.ac=item_profile_text&WT.z_author=ollyi">olluyi</a></p>      
+                <p><strong>Note:</strong> Images in the template are used only for preview purposes, they are not included in package. The original ones are replaced with placeholders.</p>
+        
+    </div>
+    
+    
+    
+    
+    <!-- 5. GRAPHICS -->
+    <a id="graphics"></a>
+    <h2>5. Graphics</h2>
+    <div class="section">
+        <p>PSDs included in folder PSD.</p>
+        <p>Original PSD-s for sale here: <a href="http://themeforest.net/item/bakery-cakery-bakery-psd-template/9180184?WT.ac=portfolio&WT.z_author=IgnitionThemes">Bakery - Cakery & Bakery PSD Template</a></p>
+               
+    </div>
+    
+    
+    
+    
+    <!-- 6. CSS FILES -->
+    <a id="css-files"></a>
+    <h2>6. CSS files</h2>
+    <div class="section">
+    	<p>Bootstrap styles in folder bootstrap.</p>
+        <p>Theme stylesheet files are in folder "styles", plugin stylesheets are usually in plugins folder.</p>
+        <p>Great helpers in style editing are element inspectors - like firebug (mentioned in Tools).</p>
+        <hr>
+        <p>main.css - main stylesheet</p>
+        <p>main.less - less version of main stylesheet, this file is not directly used, it's included because it's faster to make changes here and then compile it to css (as online less compiler use for example http://less2css.org/). Contains elements.less licensed as public domain.</p>
+    	<p>Skin css - see section skins</p>
+    </div>
+    
+    
+    
+    
+    <!-- 7. CONTACT FORMS -->
+    <a id="contact-forms"></a>
+    <h2>7. Contact and subscribe forms</h2>
+    <div class="section">
+        <p>Please note: these scripts need php support - so if you will try this on your personal computer it will probably not work (unless you have Apache server or something like that running). You have to try it on some web server and this server must have php support. PHP (and mail function) si reguired for sending emails. Most of the web servers have this support, it's basic equipment, but some might not.</p>
+        <hr>
+        
+        <h3>Prolog</h3>
+        <p>Make changes based on this documentation, do not change anything else if you are not sure, what to do, you can cause serious damage to the scripts.</p>
+        <p>Do not change contact forms, unless you know for sure what to do. Elements in contact forms must correspond to the ajax variables.</p>
+        <p>After changes are made, remember to check if it works properly.</p>
+        <hr>
+        
+        <h3>Where to start?</h3>
+        <p><strong>Contact</strong>: open file send_email.php read the comments on the top lines and make the changes. That's all for contact form.</p>
+        <p><strong>RSS</strong>: File save_rss.php is for RSS subscribe, the default setting is MailChimp, other options are: "save to email", "save to file".</p>
+        <p>When you pick one of these options, it needs to be activated, if you want to use mailchimp, you're done here, in other cases go to folder save_email_options pick the file you want and replace the original save_rss.php file with this file, keep the name save_rss.php</p>
+        <p>Open file save_rss.php read the comments on the top lines and make the changes. That's all for RSS form.</p>
+        <hr>
+        
+        <h3>Mailchimp</h3>
+        <p>Online email marketing solution to manage contacts, send emails and track results.</p>
+        <p>Mailchimp api docs - http://apidocs.mailchimp.com/api/</p>
+        <hr>
+        
+        <h3>PHP files</h3>
+        <div class="show-more">Show content</div>
+        <div class="more-content">
+            <h4>class.emailSender.php (include/class.emailSender.php)</h4>
+            <p>PHP class for sending emails.</p>
+            <p><strong>Sending emails</strong>: this is just class file, include it to other scripts and use it there</p>
+            <p><strong>Editing user messages</strong>: at the top of that file you can see $user_messages and $control_messages variables. They are set for two languages - EN and CZ - here you can change the messages (only the right side, do not delete whole line, it will cause errors and do not leave the message empty - for ajax empty message means everything's ok). For changing the language find variable "$language" (orignally "$language = 'EN';") and change it to another language code that is defined.</p>
+            <p><strong>Adding new languages</strong>: copy one of the languages made, change the language code ('EN' to 'FR' for example) and change the messages (only the right side, do not delete whole line, it will cause errors and do not leave the message empty - for ajax empty message means everything's ok). Then change the language to the new one - find variable "$language" (orignally "$language = 'EN';") and change it to another language code that is defined.</p>
+            
+            <h4>MailChimp.php (include/mailchimp-api/src/Drewm/MailChimp.php)</h4>
+            <p>PHP class for siple mailchimp API management.</p>
+            <p>License: MIT license (https://github.com/drewm/mailchimp-api/)</p>
+     	</div>
+        <hr>
+            
+        <h3>Ajax</h3>
+        <p>Visitors send messages via ajax - javascript utility, that can send data to php scripts without reloading the page.</p>
+        <p>Activation is in js/custom.js</p>
+        <h4>Data to send</h4>
+        <p>Ajax send data from contact forms - elements in contact forms must correspond to the ajax variables.</p>
+        <p>See functions form_to_ajax_request().</p>
+        <h4>Custom messages</h4>
+        <p>To edit messages from php scripts see those scripts.</p>
+        <p><strong>Editing ajax messages</strong> - these messages are set as "data" attribute of corresponding form, for example attribut "data-success-msg" contains success message from ajax.</p>
+        <hr>
+    </div>
+    
+    
+    
+    
+    <!-- 8. OTHERS -->
+    <a id="others"></a>
+    <h2>8. Others</h2>
+    <div class="section">
+        <h3>Icon-fonts</h3>
+        <h4>Font Awesome</h4>
+        <p>CSS file: <em>font-awesome/font-awesome/css/font-awesome.min.css (font-awesome/font-awesome/css/font-awesome-ie7.min.css for Internet Explorer 7)</em>. SIL OFL 1.1 License. List of all icons with their classes is here: <em>font-awesome/index.html</em>. Typefaces folder: <em>font-awesome/font-awesome/font</em>. URL: http://fortawesome.github.io/Font-Awesome/.</p>
+        <p>Example use with class "fa-glass":</p>
+        <div class="code">
+            &lt;i class=&quot;fa fa-glass&quot;&gt;&lt;/i&gt;<br>
+        </div>
+        <hr>
+        
+        <h3>Favicon</h3>
+        <p>Favicon is a small icon displayed in browser tab next to the page title. For more info and how to use it please read <a href="http://en.wikipedia.org/wiki/Favicon">Wikipedia</a></p>
+    </div>
+    
+    
+    
+   
+    <!-- HOW TO -->
+    <a id="how-to"></a>
+    <h2>How To...</h2>
+    <div class="section">
+    	<h4>Set contact and subscribe form</h4>
+        <p>Please refer to section "7. Contact and subscribe forms" and subsection "Where to start?"</p>
+        <hr>
+        
+		<h4>Change head slider</h4>
+        <p>This is plugin masterslider, please refer to documentation/masterslider-documentation</p>
+        <hr>
+        
+        <h4>Add scroll-to event</h4>
+        <p>Make an element with "scroll-to" class and attribute "href" leading to the anchor like href="#top"</p>
+        <hr>
+               
+        <h4>Add on-scroll fade effect</h4>
+        <p>Add onscroll-animate class to choosen element, be carefull if this element already has animation, or element that has both animation and transition might behave weird in some browsers.</p>
+        <hr>
+        
+		<h4>Change google map position</h4>
+        <p>In file custom.js look for code "google.maps.LatLng(40.714728,-73.998672)" where 40.714728 and -73.998672 are the position coordinates.</p>
+        <hr>
+    
+        <h4>Block emails or IPs from sending spam messages</h4>
+        <p>In selected php file adjust emailSender object to something like this: "new emailSender('blacklist_ips.txt', 'blacklist_emails.txt');" where "blacklist_ips.txt" is text file with ips to block, one ip on one line. Same for blocked emails.</p>
+        <p>Note: this is implemented only for emailSender() class, so it will work only if sending to email is used (not working for Mailchimp either saving to file).</p>
+        <hr>
+        
+        <h4>Change form messages</h4>
+        <p>See form attributes like data-success-msg etc., to change php messages see section "Contact and subscribe forms" > "PHP files" > "class.emailSender.php"</p>
+        <hr>
+    </div>
+    
+    
+    
+    
+    <!-- FAQ -->
+    <a id="faq"></a>
+    <h2>FAQ</h2>
+    <div class="section">
+    	<h4>WordPress error while installing the theme</h4>
+        <p>Well, this is correct, because this is not a WordPress theme. If you want to buy a WordPress theme, make sure it is in the right category - WordPress, HTML, Marketing, CMS, eCommerce...</p>
+		<p>So unfortunately I can't help you with this. And as I know Themeforest gives no refunds for templates bought by mistake. But you can still use this template, but not on WordPress.</p>
+        <hr>
+        
+        <h4>"Ajax could not send the request" error message</h4>
+        <p>This means, that php script is not available - wrong path to the script, or php is not running - if you do not have php running on your personal computer, it will not work, try it on web server and make sure the paths are correct.</p>
+        <hr>
+        
+        <h4>Video player is not working</h4>
+        <p>Note that this works only on web server, if you try it on your personal pc, it will not work.</p>
+        <hr>
+        
+        <h4>"Problem on server side, please try again later." error message</h4>
+        <p>This means, that php works, but mail function does not.</p>
+        <p>How to deal with it:</p>
+            <ul>
+                <li>Upgrade your hosting, so you will be able to send email from your web server</li>
+                <li>Change the script - for saving emails (rss for example) three scripts are available, "mailchimp" and "save to file" do not require mail function. But sending messages from contact form requires mail function.</li>
+                <li>Use other mail servers - for example servers from google. This option is beyond this template and is not implemented, I recommend using PHPMailer (you can see basic example at the bottom of send_email.php). This is advanced stuff that require php knowledge.</li>
+                <li>If it worked before, it might be just temporary problem on server</li>
+            </ul>
+        <hr>        
+    </div>
+    
+    
+    
+    
+    <!-- EPILOGUE -->
+    <a id="epilogue"></a>
+    <h2>Epilogue</h2>
+    <div class="section">
+        <p>Do you want to adapt this theme for your needs or are these template changes too difficult, would you like someone else to do it? You can contact me, I'll be glad to adapt this theme for your needs - this job is of course beyond this template and needs to be payed separately.</p>
+        <p>Please let me know, if you find any bugs.</p>
+        <p>For general questions like: problems with downloading theme, payments... contact evanto support.</p>
+        <p>If you're not too busy, please rate the template and if you do not give it full 5 stars, plese leave a comment why. Any feedback is appreciated. Thank you.</p>
+        <p>Once again, thank you for purchasing this theme.</p>
+        <hr>
+        
+        <h3>Tests</h3>
+        <ul>
+            <li>Mozzila Firefox (current version)</li>
+            <li>Google Chrome (current version)</li>
+            <li>Opera (current version)</li>
+            <li>Safari (v5.1)</li>
+            <li>IE11</li>
+            <li>IE10</li>
+            <li>IE9</li>
+        </ul>
+        <p>All tests are performed on my personal computer. Behavior of mobile phones, either tablets is not tested and at this time I do not make any fixes for these devices.</p>
+        <p>If you encounter some performace problems turning css animations and transtions off should help or also try to disable some plugins.</p>
+        <hr>
+        <p>Thanks for reading the documentation. If you miss there something, let me know.</p>
+    </div>
+    
+    </body>
+</html>
