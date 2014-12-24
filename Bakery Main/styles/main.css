@@ -1446,7 +1446,7 @@ ul {
   font-size: 60px;
   font-weight: 400;
   color: #FFF;
-  background-color: rgba(104, 79, 64, 0.9);
+  background-color: #f08080;
   padding: 18px 30px;
   margin: 0 0 1px 0;
   display: inline-block;
@@ -1461,7 +1461,7 @@ ul {
   font-family: 'Lato', sans-serif;
   font-size: 26px;
   font-weight: 400;
-  background-color: rgba(253, 192, 60, 0.9);
+  background-color: #fee1e1;
   color: #f08080;
   margin: 0;
   padding: 16px 35px;
@@ -2435,13 +2435,13 @@ ul {
   width: 100%;
   height: 100%;
   content: '';
-  background-color: rgba(253, 184, 34, 0.8);
+  background-color: #fee1e1;
 }
 .section-black-cover:after {
   background-color: rgba(22, 22, 25, 0.8);
 }
 .section-color-cover:after {
-  background-color: rgba(253, 184, 34, 0.8);
+  background-color: #fee1e1;
 }
 .section-white-cover:after {
   background-color: rgba(255, 255, 255, 0.7);
@@ -2840,7 +2840,7 @@ ul {
   top: -25%;
   width: 10px;
   height: 150%;
-  background-color: #f4f0cb;
+  background-color: #f08080;
   content: '';
   z-index: 99;
   -webkit-transform: rotate(-4deg);
